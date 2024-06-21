@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="load-animate">
+            <div class="intro">
+                <span>SIGN IN</span>
+                <p>Don't have an account? <a href="/register">Create Account</a></p>
+            </div>
+            <div class="login-box">
+                <form action="/auth" method="post">
+                    <div class="user-box">
+                        <input type="text" name="username" id="username" required>
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" id="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="user-submit">
+                        <button type="submit">LOGIN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const content = document.querySelector('.load-animate');
+        setTimeout(() => {
+            content.classList.add('show');
+        }, 500); // Delay added for effect (0.5 seconds)
+    });
+    </script>
+</body>
+</html>

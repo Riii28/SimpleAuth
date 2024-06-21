@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('/Fonts/Poppins-Regular.ttf');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    background-color: #212121;
+    height: 100vh;
+}
+
+/* Section animate on load */
+.load-animate {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 2s ease, transform 1s ease;
+}
+
+.load-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style untuk halaman authentication dan registration */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    backdrop-filter: blur(7.5px);
+    border-radius: 20px;
+}
+
+.intro {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+    color: #212121;
+}
+
+.intro span {
+    font-size: xx-large;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.login-box {
+    padding: 40px;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    color: #e8e8e8;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #e8e8e8;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #bdb8b8;
+    font-size: 12px;
+}
+
+.login-box .user-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.login-box .user-submit button,
+.choices .user-submit button {
+    color: #fff;
+    padding: 10px 25px;
+    background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 70%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #9f9f9f;
+    font-weight: bold;
+    transition: all 0.6s ease;
+}
+
+.login-box .user-submit button:hover,
+.choices .user-submit button:hover {
+    background-color: #3654ff;
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .6);
+}
+
+.login-box .user-submit button:active
+.choices .user-submit button:active {
+    background-color: #3654ff;
+    cursor: pointer;
+    transform: scale(0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .6);
+}
+
+/* section views */
+.container-views {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    color: #e8e8e8;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+}
+   
+.tools {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+   
+.circle {
+    padding: 0 4px;
+}
+   
+.box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+   
+.red {
+    background-color: #ff605c;
+}
+   
+.yellow {
+    background-color: #ffbd44;
+}
+   
+.green {
+    background-color: #00ca4e;
+}  
+
+.card__content {
+    padding: 20px;
+    text-align: center;
+} 
+
+svg {
+    width: 3em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+}
+   
+circle {
+    fill: none;
+    stroke: #e81cff;
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+}
+   
+@keyframes rotate4 {
+    100% {
+     transform: rotate(360deg);
+    }
+}
+   
+@keyframes dash4 {
+    0% {
+     stroke-dasharray: 1, 200;
+     stroke-dashoffset: 0;
+    }
+   
+    50% {
+     stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+   
+    100% {
+     stroke-dashoffset: -125px;
+    }
+}
+
+.choices input[type="radio"] {
+    cursor: pointer;
+}
+
+
+
+   
+   

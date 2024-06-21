@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/styles/style.css">
+</head>
+<body>
+    <div class="container-views">
+        <div class="load-animate">
+            <div class="card">
+                <div class="tools">
+                  <div class="circle">
+                    <span class="red box"></span>
+                  </div>
+                  <div class="circle">
+                    <span class="yellow box"></span>
+                  </div>
+                  <div class="circle">
+                    <span class="green box"></span>
+                  </div>
+                </div>
+                <div class="card__content">
+                    <svg viewBox="25 25 50 50">
+                        <circle r="20" cy="50" cx="50"></circle>
+                      </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // setTimeout(function () {
+        //     window.location.href = '/next';
+        // }, 3000);
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const content = document.querySelector('.load-animate');
+        setTimeout(() => {
+            content.classList.add('show');
+        }, 500); // Delay added for effect (0.5 seconds)
+    });
+
+    </script>
+</body>
+</html>

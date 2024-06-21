@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/styles/style.css">
+</head>
+<body>
+    <div class="container-views">
+        <div class="load-animate">
+            <div class="card">
+                <div class="tools">
+                  <div class="circle">
+                    <span class="red box"></span>
+                  </div>
+                  <div class="circle">
+                    <span class="yellow box"></span>
+                  </div>
+                  <div class="circle">
+                    <span class="green box"></span>
+                  </div>
+                </div>
+                <div class="card__content">
+                    <h1>Haloo, mau main ngga?</h1>
+                    <div class="choices">
+                      <form action="/submit-choice" method="post">
+                        <label for="choice">Choice:</label>
+                        <input type="radio" id="mau" name="choice" value="mau" required>
+                        <label for="mau">Mau</label>
+                        <input type="radio" id="ngga" name="choice" value="ngga" required>
+                        <label for="ngga">Ngga</label>
+                        <div class="user-submit">
+                          <button type="submit">KIRIM</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const content = document.querySelector('.load-animate');
+        setTimeout(() => {
+            content.classList.add('show');
+        }, 500); // Delay added for effect (0.5 seconds)
+    });
+    </script>
+</body>
+</html>
