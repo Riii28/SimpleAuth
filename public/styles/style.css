@@ -134,7 +134,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.card {
+.container-views  .card {
     width: 400px;
     background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
     border: 2px solid transparent;
@@ -146,7 +146,7 @@ body {
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
 }
    
-.tools {
+.container-views .tools {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -154,11 +154,11 @@ body {
     border-top-right-radius: 20px;
 }
    
-.circle {
+.container-views .circle {
     padding: 0 4px;
 }
    
-.box {
+.container-views .box {
     display: inline-block;
     align-items: center;
     width: 10px;
@@ -167,30 +167,30 @@ body {
     border-radius: 50%;
 }
    
-.red {
+.container-views .red {
     background-color: #ff605c;
 }
    
-.yellow {
+.container-views .yellow {
     background-color: #ffbd44;
 }
    
-.green {
+.container-views .green {
     background-color: #00ca4e;
 }  
 
-.card__content {
+.container-views .card__content {
     padding: 20px;
     text-align: center;
 } 
 
-svg {
+.card__content svg {
     width: 3em;
     transform-origin: center;
     animation: rotate4 2s linear infinite;
 }
    
-circle {
+.card__content circle {
     fill: none;
     stroke: #e81cff;
     stroke-width: 2;

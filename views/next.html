@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/public/styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
     <div class="container-views">
@@ -24,16 +24,18 @@
                 <div class="card__content">
                     <h1>Haloo, mau main ngga?</h1>
                     <div class="choices">
-                      <form action="/submit-choice" method="post">
-                        <label for="choice">Choice:</label>
-                        <input type="radio" id="mau" name="choice" value="mau" required>
-                        <label for="mau">Mau</label>
-                        <input type="radio" id="ngga" name="choice" value="ngga" required>
-                        <label for="ngga">Ngga</label>
+                        <form id="choiceForm" action="/submit-choice" method="POST">
+                          <label>
+                              <input type="radio" name="choice" value="mau"> Mau
+                          </label>
+                          <label>
+                              <input type="radio" name="choice" value="ngga"> Ngga
+                          </label>
+                        <input type="hidden" name="userId" id="userIdInput">
                         <div class="user-submit">
                           <button type="submit">KIRIM</button>
                         </div>
-                    </form>
+                      </form>
                     </div>
                 </div>
             </div>
@@ -41,6 +43,11 @@
     </div>
 
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+        const userIdInput = document.getElementById('userIdInput');
+        userIdInput.value = userId;
+
         document.addEventListener("DOMContentLoaded", function() {
         const content = document.querySelector('.load-animate');
         setTimeout(() => {

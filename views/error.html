@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Error</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
@@ -22,10 +22,8 @@
                   </div>
                 </div>
                 <div class="card__content">
-                  <h1>Berhasil login</h1>
-                    <svg viewBox="25 25 50 50">
-                        <circle r="20" cy="50" cx="50"></circle>
-                    </svg>
+                    <h1>Error</h1>
+                    <p id="errorMessage"></p>
                 </div>
             </div>
         </div>
@@ -33,12 +31,8 @@
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const userId = urlParams.get('userId');
-
-        // Redirect ke next.html setelah 2 detik
-        setTimeout(() => {
-            window.location.href = `/next?userId=${userId}`;
-        }, 2000);
+        const errorMessage = urlParams.get('message');
+        document.getElementById('errorMessage').innerText = errorMessage;
 
         document.addEventListener("DOMContentLoaded", function() {
         const content = document.querySelector('.load-animate');
@@ -46,7 +40,6 @@
             content.classList.add('show');
         }, 500); // Delay added for effect (0.5 seconds)
     });
-
     </script>
 </body>
 </html>
